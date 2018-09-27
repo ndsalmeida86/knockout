@@ -1,0 +1,25 @@
+<html>
+<head>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+
+                <h1>Escreva o valor</h1>
+                <input type="text" id="txtValue" class="form-control form-control-lg" data-bind="value: text, event: { keyup: enterText }"/>
+                <input type="submit" value="Adicionar" class="btn btn-primary" data-bind="event: { click: addText }"/>
+                <br><br>
+                <label>> Lista</label>
+                <ul data-bind="foreach: array">
+                    <li data-bind="text: $data"></li>
+                </ul>
+                <script src="./js/knockout.js"></script>
+                <script src="./js/actions.js"></script>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
